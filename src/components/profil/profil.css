@@ -1,0 +1,32 @@
+.containerProfil {
+    display: flex;
+    flex-direction: column;
+
+    .textMe {
+        padding: 25px;
+        border-radius: 10px;
+        width: fit-content;
+        background-color: rgb(45, 45, 45);
+        margin-left: 30%
+    }
+}
+
+.me {
+    padding: 2% 10%;
+}
+
+.red {
+    color: #F5776F;
+}
+
+.blue {
+    color: #A5D6FF;
+}
+
+.violet {
+    color: #D2A8FF;
+}
+
+.green {
+    color: #01FE87;
+}
