@@ -1,8 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --main-grey-color: #3a3a3a;
+    --main-white-color: #fff;
+    --main-dark-grey-color: rgb(45, 45, 45);
+    --main-green-color: #01FE87;
+}
+
 body {
-    background-color: #3a3a3a;
-    color: white;
+    background-color: var(--main-grey-color);
+    color: var(--main-white-color);
     width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
