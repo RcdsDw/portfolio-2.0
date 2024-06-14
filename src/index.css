@@ -9,6 +9,10 @@
     --main-green-color: #01FE87;
 }
 
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--main-grey-color);
     color: var(--main-white-color);

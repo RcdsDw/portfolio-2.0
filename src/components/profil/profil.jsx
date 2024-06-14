@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./profil.css"
 
+import { UilPlay } from '@iconscout/react-unicons'
+
 export default function Profil() {
   const [isResponseVisible, setIsResponseVisible] = useState(false);
   const [visibleLines, setVisibleLines] = useState(0);
@@ -35,7 +37,7 @@ export default function Profil() {
 
     return (
         <div className="containerProfil">
-            <div className="me">
+            <div id="me">
                 <h1 className="name">
                     R<span className="green">A</span>
                     F<span className="green">A</span>
@@ -66,7 +68,7 @@ export default function Profil() {
                     &nbsp; &#125; <br />
                 </p>
 
-                <button className="btnProfil" onClick={handleClick}>Executer</button>
+                <button className="btnProfil" onClick={handleClick}><UilPlay/></button>
 
                 <aside class={`bg-black text-white p-6 rounded-lg max-w font-mono ${isResponseVisible ? "aside-visible" : "aside-hidden"}`}>
                     <div class="flex justify-between items-center">
@@ -75,7 +77,7 @@ export default function Profil() {
                         <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
                         <div class="w-3 h-3 rounded-full bg-green-500"></div>
                         </div>
-                        <p class="text-sm">terminal</p>
+                        <p class="text-sm">bash</p>
                     </div>
                     <div class="mt-4">
                         <p class="text-white">

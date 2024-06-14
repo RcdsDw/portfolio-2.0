@@ -3,7 +3,7 @@
     flex-direction: column;
 }
 
-.me {
+#me {
     .name {
         font-size: 34px;
     };
@@ -21,15 +21,19 @@
     width: fit-content;
     background-color: rgb(45, 45, 45);
     margin: 0 auto;
-    
+}
+
+.titleFunc {
+    font-size: 26px;
+    padding-bottom: 5%;
 }
 
 .btnProfil {
     font-weight: 700;
     margin: 15px auto;
     width: fit-content;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 10px 10px;
+    border-radius: 50px;
     background-color: var(--main-grey-color);
     transition: all 0.15s ease-in-out;
 

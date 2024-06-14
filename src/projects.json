@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Waklab",
+        "img": "/logo_waklab.svg",
+        "techs": ["NextJS", "Typescript", "Symfony"],
+        "collabs": ["Alexis Migniau", "Benjamin Vaique"],
+        "duration": 1,
+        "link": "https://waklaboratory.fr"
+    }
+]
