@@ -12,6 +12,7 @@ export default function Projects() {
                     <img className="w-full" src={data.img} alt="un aperçu du projet"/>
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">{data.name}</div>
+                        <p className="text-l mb-3">{data.desc}</p>
                     </div>
                     <div className="px-6 pt-4 pb-2">
                         {data && data.techs.map((tech, i) => (

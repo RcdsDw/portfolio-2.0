@@ -1,10 +1,29 @@
 [
     {
+        "name": "Ema",
+        "desc": "Durant mon alternance il m'a été donné de refaire le site d'Ema en le remettant au goût du jour et en me basant sur la nouvelle charte graphique.",
+        "img": "/ema.svg",
+        "techs": ["React", "Javascript", "Css"],
+        "collabs": [],
+        "duration": 1,
+        "link": "https://ema-mobilite.fr"
+    },
+    {
         "name": "Waklab",
+        "desc": "Avec des amis nous avons décidé de créer un site communautaire, avec notamment une encyclopédie du jeu et quelques outils d'aide, pour le jeu Wakfu.",
         "img": "/logo_waklab.svg",
         "techs": ["NextJS", "Typescript", "Symfony"],
         "collabs": ["Alexis Migniau", "Benjamin Vaique"],
-        "duration": 1,
+        "duration": 4,
         "link": "https://waklaboratory.fr"
+    },
+    {
+        "name": "Ozkar",
+        "desc": "Durant mon alternance il m'a été donné de refaire le site d'Ozkar en me basant sur la nouvelle charte graphique et en gardant certains anciens élements.",
+        "img": "/ozkar.svg",
+        "techs": ["React", "Javascript", "Less"],
+        "collabs": [],
+        "duration": 1,
+        "link": "https://ozkar.fr"
     }
 ]
