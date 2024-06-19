@@ -50,8 +50,6 @@
     height:30vmin;
     transform-style:preserve-3d;
     position:relative;
-
-
     animation:h 1s both;
     transform-origin:center bottom;
 }
