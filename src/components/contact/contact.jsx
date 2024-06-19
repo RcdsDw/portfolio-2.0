@@ -3,38 +3,38 @@ import "./contact.css";
 
 export default function Contact() {
     return (
-        <div class="containerContact">
-            <div class="screen">
-                <div class="screen-header flex justify-between items-center">
-                    <div class="flex space-x-2 text-red-500">
-                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        <div id="containerContact">
+            <div className="screen">
+                <div className="screen-header flex justify-between items-center">
+                    <div className="flex space-x-2 text-red-500">
+                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
                     </div>
-                    <p class="text-sm">bash</p>
+                    <p className="text-sm">bash</p>
                 </div>
-                <div class="screen-body">
-                    <div class="screen-body-item left">
-                    <div class="app-title">
+                <div className="screen-body">
+                    <div className="screen-body-item left">
+                    <div className="app-title">
                         <span>Contactez-moi</span>
                     </div>
                     </div>
-                    <div class="screen-body-item">
-                    <div class="app-form">
-                        <div class="app-form-group">
-                        <input class="app-form-control" placeholder="PRENOM"/>
+                    <div className="screen-body-item">
+                    <div className="app-form">
+                        <div className="app-form-group">
+                        <input className="app-form-control" placeholder="PRENOM"/>
                         </div>
-                        <div class="app-form-group">
-                        <input class="app-form-control" placeholder="NOM"/>
+                        <div className="app-form-group">
+                        <input className="app-form-control" placeholder="NOM"/>
                         </div>
-                        <div class="app-form-group">
-                        <input class="app-form-control" placeholder="EMAIL"/>
+                        <div className="app-form-group">
+                        <input className="app-form-control" placeholder="EMAIL"/>
                         </div>
-                        <div class="app-form-group message">
-                        <input class="app-form-control" placeholder="MESSAGE"/>
+                        <div className="app-form-group message">
+                        <input className="app-form-control" placeholder="MESSAGE"/>
                         </div>
-                        <div class="app-form-group buttons">
-                        <button class="app-form-button">Envoyer</button>
+                        <div className="app-form-group buttons">
+                        <button className="app-form-button">Envoyer</button>
                         </div>
                     </div>
                     </div>

@@ -4,7 +4,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .containerContact {
+  #containerContact {
     flex: 0 1 700px;
     margin: 5%;
     padding: 5%;
@@ -30,7 +30,7 @@
   }
 
   .screen-header {
-    margin: 3%;
+    padding: 3%;
   }
   
   .screen-body {

@@ -1,18 +1,166 @@
-.containerProjects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 5% auto;
+:root {
+	--card-height: 40vw;
+	--card-margin: 4vw 10vw;
+	--card-top-offset: 1em;
+	--numcards: 3;
+	--outline-width: 0px;
+}
+
+#containerProjects {
+    margin: 5%;
+}
+
+#cards {
+	padding-bottom: calc(var(--numcards) * var(--card-top-offset)); 
+	margin-bottom: var(--card-margin); 
+}
+
+#card_1 {
+	--index: 1;
+}
+
+#card_2 {
+	--index: 2;
+}
+
+#card_3 {
+	--index: 3;
+}
+
+/* #card_4 {
+	--index: 4;
+} */
+
+.card {
+	position: sticky;
+	top: 20%;
+	padding-top: calc(var(--index) * var(--card-top-offset));
+}
+
+@supports (animation-timeline: works) {
+
+	@scroll-timeline cards-element-scrolls-in-body {
+		source: selector(body);
+		scroll-offsets:
+			/* Start when the start edge touches the top of the scrollport */
+			selector(#cards) start 1,
+			/* End when the start edge touches the start of the scrollport */
+			selector(#cards) start 0
+		;
+		start: selector(#cards) start 1; /* Start when the start edge touches the top of the scrollport */
+		end: selector(#cards) start 0; /* End when the start edge touches the start of the scrollport */
+		time-range: 2s;
+	}
+
+	.card {
+		--index0: calc(var(--index) - 1); /* 0-based index */
+		--reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
+		--reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
+	}
+	
+	.card__content {
+		transform-origin: 50% 0%;
+		will-change: transform;
+
+		--duration: calc(var(--reverse-index0) * 1s);
+		--delay: calc(var(--index0) * 1s);
+
+		animation: var(--duration) linear scale var(--delay) forwards;
+		animation-timeline: cards-element-scrolls-in-body;
+	}
+
+	@keyframes scale {
+		to {
+			transform:
+				scale(calc(
+					1.1
+					-
+					calc(0.1 * var(--reverse-index))
+				));
+		}
+	}
+}
+
+header {
+	height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+#cards {
+	list-style: none;
+	outline: calc(var(--outline-width) * 10) solid blue;
+	
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--numcards), var(--card-height));
+	gap: var(--card-margin);
 }
 
 .card {
-    padding: 1%;
-    border-radius: 10px;
-    background-color: var(--main-dark-grey-color);
+	outline: var(--outline-width) solid hotpink;
+}
+
+.card__content {
+    min-height: 60vh;
+	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+	background: var(--main-dark-grey-color);
+	color: var(--main-white-color);
+	border-radius: 1em;
+	overflow: hidden;
+
+	display: grid;
+	grid-template-areas: "text img";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+
+	align-items: stretch;
+	outline: var(--outline-width) solid lime;
+}
+
+.card__content > div {
+	width: 80%;
+	place-self: center;
+}
+
+.card__content > figure {
+	grid-area: img;
+	overflow: hidden;
+}
+
+.card__content > figure > img {
+    padding: 5%;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 3.5em;
+}
+
+h2 {
+	font-weight: 300;
+	font-size: 2.5em;
+}
+
+p {
+	font-family: sans-serif;
+	font-weight: 300;
+	line-height: 1.42;
 }
 
 .linkProject {
+    display: flex;
+    align-items: center;
+    width: fit-content;
     transition: all 0.15s ease-in-out;
+
+    p {
+        margin-left: 10px;
+        font-size: 14px;
+    }
 
     &:hover {
         color: var(--main-green-color);

@@ -6,22 +6,26 @@ import { UilLink } from '@iconscout/react-unicons'
 
 export default function Projects() {
     return (
-        <div className="containerProjects">
-            {datas.map((data, i) => (
-                <div key={i} className="max-w-sm rounded overflow-hidden shadow-lg card">
-                    <img className="w-full" src={data.img} alt="un aperçu du projet"/>
-                    <div className="px-6 py-4">
-                        <div className="font-bold text-xl mb-2">{data.name}</div>
-                        <p className="text-l mb-3">{data.desc}</p>
-                    </div>
-                    <div className="px-6 pt-4 pb-2">
-                        {data && data.techs.map((tech, i) => (
-                            <span key={i} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{tech}</span>
-                        ))}
-                    </div>
-                    <a className="linkProject" href={data.link}><UilLink/></a>
-                </div>
-            ))}
+        <div id="containerProjects">
+            <ul id="cards">
+                {datas.map((data, i) => (
+                    <li className="card" id={`card ${i + 1}`}>
+                        <div className="card__content">
+                            <div>
+                                <h2 className="font-bold text-xl mb-2">{data.name}</h2>
+                                <p className="text-l mb-3">{data.desc}</p>
+                                    {data && data.techs.map((tech, i) => (
+                                        <p key={i} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{tech}</p>
+                                    ))}
+                                <a className="linkProject" href={data.link}><UilLink/> <p>Lien vers le site</p></a>
+                            </div>
+                            <figure>
+                                <img src={data.img} alt="description"/>
+                            </figure>
+                        </div>
+                    </li>
+                ))}
+            </ul>
         </div>
     )
 }
