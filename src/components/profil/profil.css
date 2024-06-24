@@ -13,6 +13,39 @@
     padding: 3% 8%;
 }
 
+.presentation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.titleTechs {
+    font-size: 18px;
+}
+
+.techIcons {
+    color: var(--main-green-color);
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+
+    &:hover {
+        animation: colorChange 0.9s linear;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: var(--main-green-color);
+    }
+    20% {
+        color: var(--main-white-color);
+    }
+    100% {
+        color: var(--main-green-color);
+    }
+}
+
 .func {
     display: flex;
     flex-direction: column;
@@ -20,7 +53,6 @@
     border-radius: 10px;
     width: fit-content;
     background-color: rgb(45, 45, 45);
-    margin: 0 auto;
 }
 
 .titleFunc {
@@ -31,7 +63,7 @@
 .btnProfil {
     font-weight: 700;
     margin: 15px auto;
-    width: fit-content;
+    width: 45px;
     padding: 10px 10px;
     border-radius: 50px;
     background-color: var(--main-grey-color);

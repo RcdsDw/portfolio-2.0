@@ -4,7 +4,8 @@
     justify-content: space-evenly;
 }
 
-/* .logo {
+.logo {
+    width: 70px;
     padding: 0;
     margin: 0;
     transition: all 0.3s ease-in-out;
@@ -12,78 +13,4 @@
     &:hover {
         transform: rotateY(180deg);
     }
-} */
-
-.link {
-    position: relative;
-    padding: 5px 10px;
-    text-decoration: none;
-    color: var(--main-white-color);
-    overflow: hidden; 
-}
-
-.link::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    border: 2px solid transparent; /* Bordure initialement transparente */
-    pointer-events: none; /* Pour que la bordure ne bloque pas les événements de souris */
-    top: 0;
-    left: 0;
-    z-index: -1; /* Pour que la bordure soit derrière le texte */
-    transition: border-color 0.3s ease-out, transform 0.3s ease-out; /* Transition pour la couleur de la bordure et la transformation */
-    transform-origin: center; /* Origine de la transformation au centre */
-    transform: scale(0); /* Échelle initiale pour cacher la bordure */
-}
-
-.link:hover::before {
-    border-color: var(--main-green-color); /* Couleur de la bordure au survol */
-    border-radius: 10px;
-    transform: scale(1); /* Échelle complète pour afficher la bordure */
-}
-
-/* test */
-.circle {
-    width:30vmin;
-    height:30vmin;
-    transform-style:preserve-3d;
-    position:relative;
-    animation:h 1s both;
-    transform-origin:center bottom;
-}
-
-@keyframes h {
-    from {transform:rotate(-40deg)}
-    to {transform:rotate(0deg)}
-}
-
-.circle::before, .circle::after {
-  content:'';
-  display:block;
-  position:absolute;
-  width:50%;
-  height:50%;
-  background:center/cover url("../../../public/me.png");  
-}
-
-.circle::before {
-  animation:f 4s both;
-}
-
-@keyframes f {
-  from {clip-path:inset(0 80% 0 0);}
-  50%, to {clip-path:inset(0 0% 0 0);}
-}  
-
-.circle::after {
-  filter:brightness(0.2);
-  transform:rotateY(-180deg);
-  animation:g 4s both;
-}
-
-@keyframes g {
-  from {clip-path:inset(0 0 0 20%);transform-origin:20% 0;}
-  50%, to {clip-path:inset(0 0 0 100%);transform-origin:100% 0;}
 }
