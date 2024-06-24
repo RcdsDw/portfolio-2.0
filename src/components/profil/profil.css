@@ -16,7 +16,6 @@
 .presentation {
     display: flex;
     justify-content: space-around;
-    align-items: center;
 }
 
 .titleTechs {
@@ -52,7 +51,7 @@
     padding: 25px;
     border-radius: 10px;
     width: fit-content;
-    background-color: rgb(45, 45, 45);
+    background-color: var(--main-dark-grey-color);
 }
 
 .titleFunc {
