@@ -8,6 +8,8 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 export default function Projects() {
     return (
         <div id="containerProjects">
+            <div class="containerAccordion">
+            </div>
             <ul id="cards">
                 {datas.map((data, i) => (
                     <li className="card" id={`card ${i + 1}`}>
